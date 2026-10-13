@@ -19,11 +19,11 @@ Plugin de Neovim para gestionar notas con el método Zettelkasten. Texto plano c
 
 ## Instalación
 
-Con [lazy.nvim](https://github.com/folke/lazy.nvim), apuntando al directorio local:
+Con [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
-{
-  dir = "~/code/zetlmk",
+return {
+  "FedeCarrera/zetlmk",
   cmd = "Zettel",
   keys = {
     { "<leader>zn", "<cmd>Zettel nueva<cr>", desc = "Zettel: nueva nota" },
@@ -31,9 +31,6 @@ Con [lazy.nvim](https://github.com/folke/lazy.nvim), apuntando al directorio loc
   opts = {
     raiz = "~/zettel",
   },
-  config = function(_, opts)
-    require("zettel").setup(opts)
-  end,
 }
 ```
 
